@@ -30,6 +30,9 @@ myButton.addEventListener('click', getCityLatLon);
         console.log(data.weather)
         const lat = data.coord.lat;
         const lon = data.coord.lon;
+        console.log("This is my temp " + data.main.temp); // gets me my temperature
+        console.log("This is my wind speed " + data.wind.speed)  // gets me my wind speed
+        console.log("This is my humidity " + data.main.humidity) // gets me my humidity
         getCityWeatherData(lat, lon);
       });
   }
@@ -45,20 +48,23 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${lo
 .then(function (data) {
     console.log(data);
     renderWeatherData(data);
-
+   
   });
 }
 
 
 
-// city.name
+// When I click the search bar it gets me the city
 function renderWeatherData (cityClicked) {
   let cityName = cityClicked.city.name; 
   // console.log(cityName);
   let searchedCity = document.querySelector('#searchedCity');
-  searchedCity.textContent = cityName;
+  searchedCity.textContent = cityName; 
 }
 
+// let cityTemp = data.main.temp;
+// + cityTemp;
 
-// main.feels_like 
+
+// main.temp
 // ///gives temp
