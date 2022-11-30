@@ -3,7 +3,7 @@ const myAPIKey = 'f65b142e1803ffb4f8713795f5973a88';
 
 
 // let myButton = document.getElementById('js-submit-city');
-// or I can do this
+// or I can do this 
 let myButton = document.querySelector('#js-submit-city')
 
 myButton.addEventListener('click', getCityLatLon); 
