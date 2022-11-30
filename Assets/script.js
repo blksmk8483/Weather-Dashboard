@@ -34,6 +34,18 @@ myButton.addEventListener('click', getCityLatLon);
         console.log("This is my wind speed " + data.wind.speed)  // gets me my wind speed
         console.log("This is my humidity " + data.main.humidity) // gets me my humidity
         getCityWeatherData(lat, lon);
+        let mainTemp = document.createElement('p');
+        mainTemp.innerText = `temperature: ${data.main.temp}`;
+        document.body.appendChild(mainTemp);
+
+        let windSpeed = document.createElement('p');
+        windSpeed.innerText = `wind speed: ${data.wind.speed}`;
+        document.body.appendChild(windSpeed);
+
+        let mainHumidity = document.createElement('p');
+        mainHumidity.innerText = `humidity: ${data.main.humidity}`;
+        document.body.appendChild(mainHumidity);
+        
       });
   }
 
