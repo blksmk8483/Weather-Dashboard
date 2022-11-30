@@ -1,5 +1,12 @@
-
+body {
+    background-color: azure;
+}
 
 .mainTitle {
     font-size: 45px;
+}
+
+#container {
+    margin-left: 5px;
+   
 }
